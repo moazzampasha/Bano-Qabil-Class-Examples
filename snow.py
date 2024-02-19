@@ -11,4 +11,4 @@ for percent_complete in range(100):
 time.sleep(1)
 my_bar.empty()
 
-st.button("Rerun")
+st.button("PASHA")
