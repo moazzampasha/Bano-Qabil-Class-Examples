@@ -27,7 +27,7 @@ amount = st.number_input("Enter Your Amount (PKR):", value=0.0, step=1.0)
 currency = st.selectbox("Select Currency To Convert To:", options=["USD", "EUR", "GBP", "SAR", "INR", "AUD"])
 
 if st.button("Convert"):
-    result = convert_currency(amount, currency.lower())
+    result = convert_currency(currency, amount.lower())
     st.write(result)
 
 
