@@ -18,12 +18,12 @@ def convert_currency(amount, currency):
     else:
         return "Currency not supported"
 
-    return f"{amount} PKR = {converted_amount:.2f} {currency.upper()}"
+    return f"{amount} {currency.upper()}= {converted_amount:.2f} PKR  "
 
 # Streamlit UI
 st.title("Currency Converter")
 
-amount = st.number_input("Enter Your Amount (PKR):", value=0.0, step=1.0)
+amount = st.number_input("Enter Your Amount ():", value=0.0, step=1.0)
 currency = st.selectbox("Select Currency To Convert To:", options=["USD", "EUR", "GBP", "SAR", "INR", "AUD"])
 
 if st.button("Convert"):
