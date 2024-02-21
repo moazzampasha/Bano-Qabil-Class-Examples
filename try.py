@@ -24,8 +24,7 @@ def convert_currency(amount, currency):
 st.title("Currency Converter")
 
 amount = st.number_input("Enter Your Amount ():", value=0.0, step=1.0)
-currency = st.selectbox("Select Currency To Convert From
-______To PKR:", options=["USD", "EUR", "GBP", "SAR", "INR", "AUD"])
+currency = st.selectbox("Select Currency To Convert From ______To PKR:", options=["USD", "EUR", "GBP", "SAR", "INR", "AUD"])
 
 if st.button("Convert"):
     result = convert_currency(amount,currency.lower())
