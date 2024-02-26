@@ -48,7 +48,11 @@ def home_page():
 def about_us_page():
     st.title("About Us Page")
     st.write("This is the About Us Page.")
-    st.write("bhagssadkjsabkjsabfjakjffjfkjsafhbjafajfalkdlkgdalkg")
+    st.write("Welcome to our currency calculator designed by Kashan Kamran, Moazzam Pasha, and Saad Bin Irfan. This currency calculator is part of a project of Bano Qabil CIT aimed at providing users with a user-friendly tool for currency conversion. It is designed to offer insight into the process of creating a currency calculator while also serving as a practical tool for everyday use.
+
+We have simplified the coding to ensure that it is easily understandable for users of all levels (You can find the code at the bottom of the page). Our calculator makes converting currencies quick and convenient, available with just a click.
+
+In addition to currency conversion, our calculator also provides real-time exchange rates sourced from reputable financial institutions, ensuring accuracy and reliability in every transaction. Whether you're a traveler, a business owner, or simply managing personal finances, our currency calculator is here to make your currency conversions seamless and hassle-free.")
 
 def contact_us_page():
     st.title("Contact Us Page")
