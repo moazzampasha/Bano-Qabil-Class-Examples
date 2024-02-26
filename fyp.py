@@ -42,3 +42,24 @@ st.text("1 GBP = 348 PKR")
 st.text("1 SAR = 73 PKR")
 st.text("1 INR = 3.33 PKR")
 st.text("1 AUD = 180 PKR")
+
+def about_us_page():
+    st.title("About Us Page")
+    st.write("This is the About Us Page.")
+
+def contact_us_page():
+    st.title("Contact Us Page")
+    st.write("You can contact us at contact@example.com.")
+
+def main():
+    st.sidebar.title("Menu")
+    selection = st.sidebar.radio("Go to", ["Home", "About Us", "Contact Us"])
+    if selection == "Home":
+        home_page()
+    elif selection == "About Us":
+        about_us_page()
+    elif selection == "Contact Us":
+        contact_us_page()
+
+if __name__ == "__main__":
+    main()
