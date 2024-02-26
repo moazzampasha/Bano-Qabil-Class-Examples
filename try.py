@@ -52,7 +52,7 @@ def about_us_page():
 
 def contact_us_page():
     st.title("Contact Us Page")
-    st.write("You can contact us at email:kashansheikh910@gmail.com ,contact no.:0313-6639385  /n email:moazzam1325@gmail.com")
+    st.write("You can contact us at email:"kashansheikh910@gmail.com" ,contact number:"0313-6639385"  \n email: "moazzam1325@gmail.com")
 
 def main():
     st.sidebar.title("Menu")
