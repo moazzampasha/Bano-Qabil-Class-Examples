@@ -1,6 +1,5 @@
 import streamlit as st
 
-
 def convert_currency(amount, currency):
     converted_amount = 0
 
@@ -20,32 +19,36 @@ def convert_currency(amount, currency):
         return "Currency not supported"
 
     return f"{amount} {currency.upper()} = {converted_amount:.2f} PKR"
-st.write("# BANO QABIL CURRENCY CALCULATOR")
-st.write("## Sir Ghuffran Kamal Python CIT Project")
 
-# Streamlit UI
-st.title("Currency Converter")
+def home_page():
+    st.title("Home Page")
+    st.write("# BANO QABIL CURRENCY CALCULATOR")
+    st.write("## Sir Ghuffran Kamal Python CIT Project")
 
-amount = st.number_input("Enter Your Amount ():", value=0.0, step=1.0)
-currency = st.selectbox("Select Currency To Convert From ______To PKR:", options=["USD", "EUR", "GBP", "SAR", "INR", "AUD"])
+    # Streamlit UI
+    st.title("Currency Converter")
 
-if st.button("Convert"):
-    result = convert_currency(amount, currency.lower())
-    st.write(result)
+    amount = st.number_input("Enter Your Amount ():", value=0.0, step=1.0)
+    currency = st.selectbox("Select Currency To Convert From ______To PKR:", options=["USD", "EUR", "GBP", "SAR", "INR", "AUD"])
 
-# Adding a column on the right
-st.text("")
-st.text("Conversion Rates:")
-st.text("1 USD = 279 PKR")
-st.text("1 EUR = 301 PKR")
-st.text("1 GBP = 348 PKR")
-st.text("1 SAR = 73 PKR")
-st.text("1 INR = 3.33 PKR")
-st.text("1 AUD = 180 PKR")
+    if st.button("Convert"):
+        result = convert_currency(amount, currency.lower())
+        st.write(result)
+
+    # Adding a column on the right
+    st.text("")
+    st.text("Conversion Rates:")
+    st.text("1 USD = 279 PKR")
+    st.text("1 EUR = 301 PKR")
+    st.text("1 GBP = 348 PKR")
+    st.text("1 SAR = 73 PKR")
+    st.text("1 INR = 3.33 PKR")
+    st.text("1 AUD = 180 PKR")
 
 def about_us_page():
     st.title("About Us Page")
     st.write("This is the About Us Page.")
+    st.write("bhagssadkjsabkjsabfjakjffjfkjsafhbjafajfalkdlkgdalkg")
 
 def contact_us_page():
     st.title("Contact Us Page")
@@ -53,26 +56,14 @@ def contact_us_page():
 
 def main():
     st.sidebar.title("Menu")
-    selection = st.sidebar.radio("Go to", ["Home", "About Us", "Contact Us"])
-    if selection == "Home":
-        home_page()
-    elif selection == "About Us":
-        about_us_page()
-    elif selection == "Contact Us":
-        contact_us_page()
+    pages = {
+        "Home": home_page,
+        "About Us": about_us_page,
+        "Contact Us": contact_us_page
+    }
+    selection = st.sidebar.radio("Go to", list(pages.keys()))
+    page = pages[selection]
+    page()
 
 if __name__ == "__main__":
     main()
-
-background_color = """
-<style>
-    body {
-        background-color: #f0f0f0;  /* Change the color code to your desired background color */
-    }
-</style>
-"""
-st.markdown(background_color, unsafe_allow_html=True)
-
-# Your Streamlit app content goes here
-st.title("Streamlit App with Background Color")
-st.write("This is a Streamlit app with a custom background color.")
