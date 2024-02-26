@@ -1,7 +1,5 @@
 import streamlit as st
-def home_page():
-    st.title("Home Page")
-    st.write("Welcome to the Home Page!")
+
 
 def convert_currency(amount, currency):
     converted_amount = 0
@@ -22,6 +20,10 @@ def convert_currency(amount, currency):
         return "Currency not supported"
 
     return f"{amount} {currency.upper()} = {converted_amount:.2f} PKR"
+def main():
+menu=["home","about us","contact us"]
+choice=st.sidebar.selectbox"menu",menu
+if choice=='home':st.subheader("home")
 st.write("# BANO QABIL CURRENCY CALCULATOR")
 st.write("## Sir Ghuffran Kamal Python CIT Project")
 
