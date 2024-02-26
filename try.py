@@ -1,5 +1,6 @@
 import streamlit as st
 
+
 def convert_currency(amount, currency):
     converted_amount = 0
 
@@ -19,19 +20,11 @@ def convert_currency(amount, currency):
         return "Currency not supported"
 
     return f"{amount} {currency.upper()} = {converted_amount:.2f} PKR"
+st.write("# BANO QABIL CURRENCY CALCULATOR")
+st.write("## Sir Ghuffran Kamal Python CIT Project")
 
 # Streamlit UI
 st.title("Currency Converter")
-
-# Set background color using HTML
-background_color = """
-<style>
-    body {
-        background-color: #f0f0f0;  /* Change the color code to your desired background color */
-    }
-</style>
-"""
-st.markdown(background_color, unsafe_allow_html=True)
 
 amount = st.number_input("Enter Your Amount ():", value=0.0, step=1.0)
 currency = st.selectbox("Select Currency To Convert From ______To PKR:", options=["USD", "EUR", "GBP", "SAR", "INR", "AUD"])
@@ -69,7 +62,17 @@ def main():
         contact_us_page()
 
 if __name__ == "__main__":
-main()
+    main()
 
+background_color = """
+<style>
+    body {
+        background-color: #f0f0f0;  /* Change the color code to your desired background color */
+    }
+</style>
+"""
+st.markdown(background_color, unsafe_allow_html=True)
 
-
+# Your Streamlit app content goes here
+st.title("Streamlit App with Background Color")
+st.write("This is a Streamlit app with a custom background color.")
