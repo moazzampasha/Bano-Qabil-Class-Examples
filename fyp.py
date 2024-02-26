@@ -19,6 +19,8 @@ def convert_currency(amount, currency):
         return "Currency not supported"
 
     return f"{amount} {currency.upper()} = {converted_amount:.2f} PKR"
+st.write("# BANO QABIL CURRENCY CALCULATOR")
+ST.write("## Sir Ghuffran Kamal Python CIT Project")
 
 # Streamlit UI
 st.title("Currency Converter")
