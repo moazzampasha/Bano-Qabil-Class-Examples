@@ -69,4 +69,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+image=image.open("logo.png")
+st.image(image,caption='BANO QABIL',use_column_width=True)
  
