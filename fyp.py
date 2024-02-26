@@ -1,4 +1,7 @@
 import streamlit as st
+def home_page():
+    st.title("Home Page")
+    st.write("Welcome to the Home Page!")
 
 def convert_currency(amount, currency):
     converted_amount = 0
