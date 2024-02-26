@@ -62,11 +62,11 @@ def main():
     st.sidebar.title("Menu")
     selection = st.sidebar.radio("Go to", ["Home", "About Us", "Contact Us"])
     if selection == "Home":
-home_page()
+    home_page()
     elif selection == "About Us":
-about_us_page()
+    about_us_page()
     elif selection == "Contact Us":
-contact_us_page()
+    contact_us_page()
 
 if __name__ == "__main__":
 main()
