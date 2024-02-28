@@ -66,10 +66,16 @@ def main():
     selection = st.sidebar.radio("Go to", list(pages.keys()))
     page = pages[selection]
     page()
+    st.title("Display Image from GitHub")
+    
+    # URL of the image hosted on GitHub
+    image_url = "https://github.com/moazzampasha/Bano-Qabil-Class-Examples/blob/main/logo.png"  # Update with your image URL
+    
+    st.image(image_url, caption='Image from GitHub', use_column_width=True)
 
 if __name__ == "__main__":
     main()
 
-image=image.open("logo.png")
-st.image(image,caption='BANO QABIL',use_column_width=True)
+
+
  
