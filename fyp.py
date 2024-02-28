@@ -61,6 +61,16 @@ def main():
     elif selection == "Contact Us":
         contact_us_page()
 
+    st.title("Display Image from GitHub")
+    
+    # URL of the image hosted on GitHub
+    image_url = "https://github.com/moazzampasha/Bano-Qabil-Class-Examples/blob/main/logo.png"  # Update with your image URL
+    
+    st.image(image_url, caption='Image from GitHub', use_column_width=True)
+
+
+
+
 if __name__ == "__main__":
     main()
 
